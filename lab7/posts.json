@@ -1,0 +1,7 @@
+[
+  { "id": 1, "user_id": 1, "title": "Hello World",   "content": "My first post!",            "created": 1710448296 },
+  { "id": 2, "user_id": 2, "title": "PHP Basics",    "content": "Learning PHP step by step", "created": 1710534696 },
+  { "id": 3, "user_id": 1, "title": "JSON Files",    "content": "Store and read JSON",       "created": 1710621096 },
+  { "id": 4, "user_id": 3, "title": "GET vs POST",   "content": "Lecture notes summary",     "created": 1710707496 },
+  { "id": 5, "user_id": 2, "title": "Timestamps",    "content": "Using time() and date()",   "created": 1710793896 }
+]
