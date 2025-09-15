@@ -1,0 +1,56 @@
+:root {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #666;
+  --line: #ddd;
+  --accent: #e0245e; /* для лайков */
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
+
+h1 { font-size: 22px; margin: 0 0 12px; }
+
+article { padding: 12px 0; border-top: 1px solid var(--line); }
+article:first-of-type { border-top: none; }
+
+/* Заголовок поста + аватар */
+article > header { margin-bottom: 8px; }
+.avatar {
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.post-title {
+  display: inline;            /* чтобы шло в одну строку с аватаром */
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 8px 0 0;
+}
+.post-time {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Картинка поста и подпись */
+figure { margin: 8px 0; }
+figure img { max-width: 100%; display: block; border-radius: 8px; }
+figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+/* Блок лайков */
+.likes {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Текст комментария */
+.comment {
+  margin-top: 6px;
+  padding: 8px 10px;
+  background: #f7f7f7;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+}

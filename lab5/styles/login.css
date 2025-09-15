@@ -1,0 +1,53 @@
+/* БАЗА: шрифты и базовые отступы */
+:root {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #666;
+  --line: #ddd;
+  --brand: #111;   /* цвет кнопки */
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
+
+/* Заголовки страницы */
+h1 { font-size: 20px; margin: 0 0 8px; }
+#login-title {
+  font-size: 48px;          /* крупный заголовок, как в примере */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 8px 0 16px;
+}
+
+/* Картинка и подпись под ней */
+figure { margin: 0 0 16px; }
+figure img { max-width: 420px; width: 100%; border-radius: 8px; display: block; }
+figure figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+
+/* Форма и поля */
+form { max-width: 420px; }
+form div { margin: 10px 0; }
+label { font-weight: 600; }
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+input:focus { border-color: #999; }
+
+/* Кнопка */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button[type="submit"]:hover { filter: brightness(1.1); }

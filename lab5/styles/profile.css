@@ -1,0 +1,53 @@
+:root {
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #666;
+  --line: #ddd;
+  --brand: #111;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
+
+h1 { font-size: 22px; margin: 0 0 12px; }
+
+/* Блок профиля */
+.profile { margin-bottom: 16px; }
+.avatar {
+  border-radius: 50%;          /* круглый аватар */
+  display: block;
+  width: 96px; height: 96px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 8px 0 4px;
+}
+.bio { color: var(--muted); margin: 0 0 8px; }
+.posts-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+/* Галерея */
+.gallery { margin-top: 8px; }
+.photos {
+  list-style: none;
+  padding: 0; margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 в ряд */
+  gap: 8px;
+}
+/* Квадратные превью одинакового размера */
+.photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* делаем квадрат */
+  object-fit: cover;     /* без искажений, обрезаем края по надобности */
+  display: block;
+  border-radius: 6px;
+}
