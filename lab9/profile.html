@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль | Соцсеть</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="profile">
+  <nav class="menu">
+    <a class="menu__link" href="login.html">Вход</a>
+    <a class="menu__link" href="feed.html">Лента</a>
+    <a class="menu__link" href="profile.html">Профиль</a>
+  </nav>
+  <main class="profile__page">
+    
+    <header class="profile__header">
+      <img src="img/avatar.png" alt="Аватар пользователя" class="profile__avatar">
+      <div class="profile__info">
+        <h1 class="profile__name">Иван Петров</h1>
+        <p class="profile__bio">Frontend-разработчик, люблю верстку и котиков 🐱</p>
+        <ul class="profile__stats">
+          <li class="profile__stat"><strong>12</strong> постов</li>
+          <li class="profile__stat"><strong>340</strong> подписчиков</li>
+          <li class="profile__stat"><strong>180</strong> подписки</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="profile__posts">
+      <h2 class="visually-hidden">Посты пользователя</h2>
+      
+      <article class="post">
+        <header class="post__header">
+          <img src="img/avatar.png" alt="Аватар" class="post__avatar">
+          <div class="post__author">
+            <span class="post__name">Иван Петров</span>
+            <span class="post__time">1 день назад</span>
+          </div>
+        </header>
+        <div class="post__content">
+          <p class="post__text">Сегодня делал верстку профиля 😊</p>
+          <img src="img/post2.png" alt="Фото поста" class="post__image">
+        </div>
+        <footer class="post__footer">
+          <button class="btn btn_type_primary">❤ 20</button>
+          <button class="btn">💬 5</button>
+        </footer>
+      </article>
+
+    </section>
+  </main>
+</body>
+</html>
