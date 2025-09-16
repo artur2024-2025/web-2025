@@ -1,53 +1,87 @@
 :root {
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --text: #111;
-  --muted: #666;
-  --line: #ddd;
-  --brand: #111;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --radius: 12px;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
+* {
+  box-sizing: border-box;
+}
 
-h1 { font-size: 22px; margin: 0 0 12px; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-/* Блок профиля */
-.profile { margin-bottom: 16px; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+/* Блок профиля (аватар, имя, подпись, кнопка) */
+.profile {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .avatar {
-  border-radius: 50%;          /* круглый аватар */
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
   display: block;
-  width: 96px; height: 96px;
+  margin: 0 auto;
+  object-fit: cover;
 }
+
 .name {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.01em;
-  margin: 8px 0 4px;
+  margin: 10px 0 4px;
 }
-.bio { color: var(--muted); margin: 0 0 8px; }
+
+.bio {
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
 .posts-btn {
   padding: 8px 12px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
   background: #f7f7f7;
   cursor: pointer;
 }
 
-/* Галерея */
-.gallery { margin-top: 8px; }
+/* Галерея фотографий: ровная сетка квадратов 3×N */
+.gallery {
+  margin-top: 8px;
+}
+
 .photos {
   list-style: none;
-  padding: 0; margin: 8px 0 0;
+  padding: 0;
+  margin: 8px 0 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 в ряд */
-  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-/* Квадратные превью одинакового размера */
+
 .photos img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* делаем квадрат */
-  object-fit: cover;     /* без искажений, обрезаем края по надобности */
+  aspect-ratio: 1 / 1;   /* квадрат */
+  object-fit: cover;     /* без искажений, обрезаем по краям при необходимости */
+  border-radius: 8px;
   display: block;
-  border-radius: 6px;
 }

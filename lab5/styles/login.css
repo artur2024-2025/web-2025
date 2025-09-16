@@ -1,53 +1,116 @@
-/* БАЗА: шрифты и базовые отступы */
 :root {
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --text: #111;
-  --muted: #666;
-  --line: #ddd;
-  --brand: #111;   /* цвет кнопки */
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --brand: #111;
+  --radius: 12px;
 }
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
 
-/* Заголовки страницы */
-h1 { font-size: 20px; margin: 0 0 8px; }
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
 #login-title {
-  font-size: 48px;          /* крупный заголовок, как в примере */
+  font-size: 56px;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin: 8px 0 16px;
 }
 
-/* Картинка и подпись под ней */
-figure { margin: 0 0 16px; }
-figure img { max-width: 420px; width: 100%; border-radius: 8px; display: block; }
-figure figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+/* Две колонки на desktop: слева фото, справа форма */
+section[aria-labelledby="login-title"] {
+  display: grid;
+  gap: 24px;
+}
 
-/* Форма и поля */
-form { max-width: 420px; }
-form div { margin: 10px 0; }
-label { font-weight: 600; }
-input[type="email"], input[type="password"] {
+@media (min-width: 1024px) {
+  section[aria-labelledby="login-title"] {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+  }
+
+  #login-title {
+    grid-column: 1 / -1;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius);
+  display: block;
+}
+
+figure figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+form {
+  max-width: 360px;
+}
+
+form div {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
   outline: none;
 }
-input:focus { border-color: #999; }
 
-/* Кнопка */
+input:focus {
+  border-color: #a3a3a3;
+}
+
 button[type="submit"] {
   width: 100%;
   padding: 12px 14px;
-  border: none;
-  border-radius: 8px;
+  border: 0;
+  border-radius: 10px;
   background: var(--brand);
   color: #fff;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
-button[type="submit"]:hover { filter: brightness(1.1); }
+
+button[type="submit"]:hover {
+  filter: brightness(1.06);
+}

@@ -1,56 +1,101 @@
 :root {
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
   --text: #111;
-  --muted: #666;
-  --line: #ddd;
-  --accent: #e0245e; /* для лайков */
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --like: #e0245e;
+  --radius: 12px;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body { font-family: var(--font); color: var(--text); line-height: 1.5; padding: 16px; }
+* {
+  box-sizing: border-box;
+}
 
-h1 { font-size: 22px; margin: 0 0 12px; }
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-article { padding: 12px 0; border-top: 1px solid var(--line); }
-article:first-of-type { border-top: none; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-/* Заголовок поста + аватар */
-article > header { margin-bottom: 8px; }
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+article {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+article:first-of-type {
+  border-top: none;
+}
+
+/* Шапка поста: аватар + имя + дата в одну строку */
+article > header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
 .avatar {
-  vertical-align: middle;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  margin-right: 8px;
+  flex: 0 0 48px;
+  object-fit: cover;
 }
+
 .post-title {
-  display: inline;            /* чтобы шло в одну строку с аватаром */
   font-size: 18px;
-  font-weight: 700;
-  margin: 0 8px 0 0;
+  font-weight: 800;
+  margin: 0;
 }
+
 .post-time {
   color: var(--muted);
   font-size: 14px;
+  margin-left: auto;
 }
 
-/* Картинка поста и подпись */
-figure { margin: 8px 0; }
-figure img { max-width: 100%; display: block; border-radius: 8px; }
-figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+/* Фото поста и подпись */
+figure {
+  margin: 8px 0;
+}
 
-/* Блок лайков */
+figure img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Лайки и комментарий */
 .likes {
   margin-top: 8px;
+  color: var(--like);
   font-weight: 700;
-  color: var(--accent);
 }
 
-/* Текст комментария */
 .comment {
-  margin-top: 6px;
-  padding: 8px 10px;
+  margin-top: 8px;
+  padding: 10px 12px;
   background: #f7f7f7;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
   font-size: 15px;
 }
