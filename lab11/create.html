@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новый пост | Соцсеть</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <nav class="menu">
+    <a class="menu__link" href="login.html">Вход</a>
+    <a class="menu__link" href="feed.html">Лента</a>
+    <a class="menu__link" href="profile.html">Профиль</a>
+  </nav>
+
+  <main class="create">
+    <h1 class="create__title">Новый пост</h1>
+
+    <!-- Блок фотографий -->
+    <section class="create__photos" id="photos">
+      <!-- серое поле с кнопкой внутри -->
+      <div class="create__drop">
+        <button type="button" class="create__btn-add" id="addFirstPhoto">Добавить фото</button>
+        <input type="file" accept="image/*" id="fileInput" hidden />
+      </div>
+
+      <!-- синий текстовая кнопка под полем -->
+      <button type="button" class="create__link-add" id="addMorePhoto">Добавить фото</button>
+
+      <!-- превью как слайдер -->
+      <div class="slider create__slider" id="preview" hidden>
+        <button class="slider__btn slider__btn_prev" type="button" aria-label="Назад" id="prevBtn">◀</button>
+        <!-- сюда будем добавлять <img class="slider__image"> -->
+        <button class="slider__btn slider__btn_next" type="button" aria-label="Вперёд" id="nextBtn">▶</button>
+        <div class="slider__indicator" id="indicator">0/0</div>
+      </div>
+    </section>
+
+    <!-- Подпись -->
+    <section class="create__caption">
+      <textarea class="create__textarea" id="caption" rows="3" placeholder="Добавьте подпись…"></textarea>
+    </section>
+
+    <!-- Кнопка Поделиться -->
+    <section class="create__actions">
+      <button class="btn btn_type_primary" id="shareBtn" disabled>Поделиться</button>
+    </section>
+  </main>
+
+  <script src="js/create.js" defer></script>
+</body>
+</html>

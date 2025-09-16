@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход | Соцсеть</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="login">
+  <nav class="menu">
+    <a class="menu__link" href="login.html">Вход</a>
+    <a class="menu__link" href="feed.html">Лента</a>
+    <a class="menu__link" href="profile.html">Профиль</a>
+  </nav>
+
+  <div class="login__layout">
+    <div class="login__media">
+      <img src="img/login.png" alt="Добро пожаловать" class="login__image">
+    </div>
+
+    <div class="login__form">
+      <form class="form" id="login-form" novalidate>
+        <h1 class="form__title">Вход</h1>
+
+        <div class="form__field">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" id="email" name="email" autocomplete="username">
+          <div class="field__error" id="email-error"></div>
+        </div>
+
+        <div class="form__field">
+          <label class="form__label" for="password">Пароль</label>
+          <input class="form__input" type="password" id="password" name="password" autocomplete="current-password">
+          <div class="field__error" id="password-error"></div>
+        </div>
+
+        <button class="btn btn_type_primary" type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/login.js" defer></script>
+</body>
+</html>
