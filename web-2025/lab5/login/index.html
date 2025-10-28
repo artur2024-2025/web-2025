@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — Соцсеть</title>
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <h1>Соцсеть</h1>
+    <nav aria-label="Основная навигация">
+      <a href="../home/">Лента</a> |
+      <a href="../profile/">Профиль</a>
+    </nav>
+  </header>
+
+  <!-- Основная часть страницы -->
+  <main>
+    <section aria-labelledby="login-title">
+      <h2 id="login-title">Войти</h2>
+
+      <!-- Картинка приветствия -->
+      <figure>
+        <img src="../../lab4/images/ф1.jpg" alt="Добро пожаловать">
+        <figcaption>Добро пожаловать в соцсеть</figcaption>
+      </figure>
+
+      <!-- Форма авторизации -->
+      <!-- Включена нативная валидация полей -->
+      <form action="../home/" method="get">
+        <div>
+          <label for="email">Электропочта</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            inputmode="email"
+            autocomplete="username"
+            placeholder="name@example.com">
+        </div>
+
+        <div>
+          <label for="password">Пароль</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            minlength="4"
+            autocomplete="current-password"
+            placeholder="••••">
+        </div>
+
+        <div>
+          <button type="submit">Продолжить</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer>
+    <small>© 2025 Соцсеть</small>
+  </footer>
+
+</body>
+</html>

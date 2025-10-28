@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход — Соцсеть</title>
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <h1>Соцсеть</h1>
+    <nav aria-label="Основная навигация">
+      <a href="../home/">Лента</a> |
+      <a href="../profile/">Профиль</a>
+    </nav>
+  </header>
+
+  <!-- Основной блок входа -->
+  <main>
+    <section aria-labelledby="login-title">
+      <h2 id="login-title">Войти</h2>
+
+      <!-- Картинка приветствия -->
+      <figure>
+        <img src="../images/ф1.jpg" alt="Добро пожаловать">
+        <figcaption>Добро пожаловать в соцсеть</figcaption>
+      </figure>
+
+      <!-- Форма авторизации -->
+      <form action="../home/" method="get">
+        <div>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div>
+          <label for="password">Пароль</label><br>
+          <input id="password" name="password" type="password" required>
+        </div>
+
+        <div>
+          <button type="submit">Продолжить</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer>
+    <small>© 2025 Соцсеть</small>
+  </footer>
+
+</body>
+</html>

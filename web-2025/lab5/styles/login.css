@@ -1,0 +1,137 @@
+/* ---------- Базовые переменные ---------- */
+:root {
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --brand: #111;
+  --radius: 12px;
+}
+
+/* ---------- Сброс и базовая сетка ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Общие стили ---------- */
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+/* ---------- Заголовок страницы ---------- */
+#login-title {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 8px 0 16px;
+}
+
+/* ---------- Макет: две колонки на десктопе ---------- */
+section[aria-labelledby="login-title"] {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  section[aria-labelledby="login-title"] {
+    grid-template-columns: 1fr 360px;
+    align-items: start;
+  }
+
+  #login-title {
+    grid-column: 1 / -1; /* заголовок на всю ширину */
+  }
+}
+
+/* ---------- Фото и подпись ---------- */
+figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  border-radius: var(--radius);
+}
+
+figure figcaption {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- Форма ---------- */
+form {
+  max-width: 360px;
+}
+
+form div {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--muted); /* метки серым цветом */
+}
+
+/* поля ввода */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+}
+
+/* приятные плейсхолдеры */
+input::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+input:focus {
+  border-color: #a3a3a3;
+}
+
+/* ---------- Кнопка ---------- */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand);
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  filter: brightness(1.06);
+}
+
+/* видимая обводка при фокусе — для доступности */
+button[type="submit"]:focus-visible {
+  outline: 2px solid #9ca3af;
+  outline-offset: 3px;
+}

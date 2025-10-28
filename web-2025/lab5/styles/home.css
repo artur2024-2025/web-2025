@@ -1,0 +1,107 @@
+/* ---------- Базовые переменные ---------- */
+:root {
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --like: #e0245e;
+  --radius: 12px;
+}
+
+/* ---------- Нормализация ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Общий каркас страницы ---------- */
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto; /* центрируем контент */
+}
+
+/* ---------- Заголовки ---------- */
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+/* ---------- Посты в ленте ---------- */
+article {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+article:first-of-type {
+  border-top: none; /* у первого поста граница не нужна */
+}
+
+/* шапка поста: аватар, имя и дата в одну линию */
+article > header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* ---------- Аватар и мета ---------- */
+.avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.post-time {
+  margin-left: auto; /* уезжает вправо */
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- Фото и подпись ---------- */
+figure {
+  margin: 8px 0;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius);
+}
+
+figcaption {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------- Лайки и комментарий ---------- */
+.likes {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--like);
+}
+
+.comment {
+  margin-top: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  background: #f7f7f7;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}

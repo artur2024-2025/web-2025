@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Профиль — Соцсеть</title>
+  <link rel="stylesheet" href="../styles/profile.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <h1>Профиль</h1>
+    <nav aria-label="Основная навигация">
+      <a href="../home/">Лента</a> |
+      <a href="../profile/" aria-current="page">Профиль</a> |
+      <a href="../login/">Выход</a>
+    </nav>
+  </header>
+
+  <!-- Основной контент страницы -->
+  <main>
+
+    <!-- Информация о пользователе -->
+    <section class="profile" aria-labelledby="user-heading">
+      <img class="avatar" src="../../lab4/images/ф4.jpg" alt="Аватар пользователя" width="96" height="96">
+      <h2 id="user-heading" class="name">Ваня Денисов</h2>
+      <p class="bio">
+        Привет! Я системный аналитик в ACME. Тут у меня жизнь только для самых главных.
+      </p>
+      <p>
+        <button type="button" class="posts-btn">43 поста</button>
+      </p>
+    </section>
+
+    <!-- Галерея фотографий -->
+    <section aria-labelledby="photos-heading" class="gallery">
+      <h3 id="photos-heading">Фотографии</h3>
+      <div class="photos">
+        <img src="../../lab4/images/ф5.png" alt="Фото 5">
+        <img src="../../lab4/images/ф6.jpg" alt="Фото 6">
+        <img src="../../lab4/images/ф7.jpg" alt="Фото 7">
+        <img src="../../lab4/images/ф8.jpg" alt="Фото 8">
+        <img src="../../lab4/images/ф9.jpg" alt="Фото 9">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer>
+    <small>© 2025 Соцсеть</small>
+  </footer>
+
+</body>
+</html>

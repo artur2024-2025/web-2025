@@ -1,0 +1,92 @@
+/* ---------- Базовые переменные ---------- */
+:root {
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --text: #111;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --radius: 12px;
+}
+
+/* ---------- Сброс и базовые настройки ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Общие стили ---------- */
+body {
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+/* ---------- Блок профиля ---------- */
+/* аватар, имя, описание и кнопка */
+.profile {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 10px 0 4px;
+}
+
+.bio {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.posts-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+/* ---------- Галерея фотографий ---------- */
+/* ровная сетка 3×N из квадратных фото */
+.gallery {
+  margin-top: 8px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;  /* квадрат */
+  object-fit: cover;    /* кадрируем по краям */
+  border-radius: 8px;
+  display: block;
+}
